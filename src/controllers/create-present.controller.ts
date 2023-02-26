@@ -1,7 +1,7 @@
 import {Request, Response} from 'express';
 import {CreatePresentInput, createPresentService} from "../services/create-present.service";
 
-export function createPresentController(req: Request, res: Response) {
+export async function createPresentController(req: Request, res: Response) {
     console.log({body: req.body})
     const input: CreatePresentInput = {
         title: req.body.title,
@@ -10,7 +10,7 @@ export function createPresentController(req: Request, res: Response) {
         price: req.body.price,
     }
 
-    const present = createPresentService(input)
+    const present = await createPresentService(input)
 
     return res.send({present})
 }
