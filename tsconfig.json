@@ -5,6 +5,8 @@
     "module": "CommonJS",
     "target": "ES2021",
     "moduleResolution": "Node",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   }
 }
