@@ -1,4 +1,7 @@
-import {Column, PrimaryGeneratedColumn, CreateDateColumn, Entity} from "typeorm";
+import {Column, PrimaryGeneratedColumn, CreateDateColumn, Entity, ManyToMany} from "typeorm";
+import {Family} from "./family.entity";
+import {JoinTable} from 'typeorm';
+
 
 @Entity()
 export class Member {
@@ -19,4 +22,8 @@ export class Member {
 
     @CreateDateColumn({nullable: true})
     registrationDate!: string;
+
+    @ManyToMany(() => Family)
+    @JoinTable()
+    categories: Family[]
 }

@@ -2,6 +2,7 @@ import express from "express"
 
 import {createPresentController} from "./controllers/create-present.controller";
 import {getPresentsController} from "./controllers/get-presents.controller";
+import {ConnectionSingleton} from "./repositories/connection-singleton";
 
 const app = express()
 const port = 3000
@@ -10,6 +11,8 @@ const port = 3000
 // midlewwares
 app.use(express.json());
 
+// start DB con
+ConnectionSingleton.getInstance()
 
 const PRESENT_RESOURCE = "/presents"
 

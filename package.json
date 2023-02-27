@@ -4,18 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node ./dist/index.js --experimental-modules",
-    "build": "tsc"
+    "start": "npm run build && node ./dist/index.js --experimental-modules",
+    "build": "tsc-esm"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.2",
+    "@digitak/tsc-esm": "^3.1.4",
     "express": "^4.18.2",
     "pg": "^8.9.0",
-    "typeorm": "^0.2.45"
+    "typeorm": "^0.3.12"
   },
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "@types/node": "^18.14.1",
     "typescript": "^4.9.5"

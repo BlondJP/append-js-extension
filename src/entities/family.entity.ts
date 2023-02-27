@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, ManyToMany, JoinTable} from "typeorm";
+import {Member} from "./member.entity";
 
 @Entity()
 export class Family {
@@ -7,4 +8,7 @@ export class Family {
 
     @Column()
     name!: string;
+
+    @ManyToMany(() => Member)
+    categories: Member[]
 }
