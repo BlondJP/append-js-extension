@@ -1,5 +1,6 @@
 import fs, {readFileSync} from'fs';
 import path from 'path';
+const {isInternalImport} = require("./is-internal-import")
 
 const rootDir = '/Users/jp_blond/Projects/append-js-extension/dist';
 
@@ -35,13 +36,31 @@ console.log(jsFilePaths)
 /**
  * IDENTIFYING LINES TO REPLACE.
  */
+function isInternalImport(str) {
+    let foundCotesAfterFrom = 0
+    let index = str.length
+
+    if (str.startsWith("import ")) {
+        while (index > 0) {
+            console.log(str[index]);
+            if (str[index] === '"') {
+                foundCotesAfterFrom++
+                if (foundCotesAfterFrom === 2 && str[index + 1] === '.') {
+                    return true
+                } 
+            }
+            index--
+        }
+    }
+    return false
+}
 const SPLIT_FILE_IN_LINES_REGEX = /\r?\n/
 const filesToChange = {}
 jsFilePaths.forEach(fp => filesToChange[fp] = [])
 for (const jsFilePath of jsFilePaths) {
     readFileSync(jsFilePath,
         'utf-8').split(SPLIT_FILE_IN_LINES_REGEX).forEach(function(line){
-        if (line.startsWith("import ")) {
+        if (isInternalImport(line)) {
             const newLine = line.substring(0, line.length - 2) + '.js";'
             filesToChange[jsFilePath].push({oldLine: line, newLine})
         }

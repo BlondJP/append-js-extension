@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69538e62-31b4-433f-b80f-1f8cf22c4c56" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/dist/controllers/create-present.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/controllers/create-present.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/controllers/get-presents.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/controllers/get-presents.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entities/family.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entities/family.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entities/list.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entities/list.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entities/member.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entities/member.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entities/present.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entities/present.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/repositories/connection-singleton.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/repositories/connection-singleton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/repositories/family.repository.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/repositories/family.repository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/services/create-present.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/services/create-present.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/services/get-presents.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/services/get-presents.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +36,8 @@
       <option name="presentableId" value="Default" />
       <updated>1677791452299</updated>
       <workItem from="1677791453732" duration="157000" />
+      <workItem from="1677792052696" duration="30000" />
+      <workItem from="1677792097150" duration="39000" />
     </task>
     <servers />
   </component>
