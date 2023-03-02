@@ -1,7 +1,7 @@
 import fs, {readFileSync} from'fs';
 import path from 'path';
 
-const rootDir = '/Users/jp_blond/Projects/family-presents/back/dist';
+const rootDir = '/Users/jp_blond/Projects/append-js-extension/dist';
 
 function *walkSync(dir) {
     const files = fs.readdirSync(dir, { withFileTypes: true });
