@@ -1,8 +1,4 @@
-import {List} from "./list.entity";
-import {Member} from "./member.entity";
-import {Family} from "./family.entity";
-import {Present} from "./present.entity";
-
-export function getEntities() {
-    return [List, Member, Present, Family, ]
-}
+export * from "./list.entity";
+export * from "./member.entity";
+export * from "./family.entity";
+export * from "./present.entity";

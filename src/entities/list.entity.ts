@@ -9,6 +9,7 @@ export class List {
     @Column()
     name!: string;
 
-    @OneToMany(() => Present, (present) => present.list)
+    // write it with string to avoid circular dependencies
+    @OneToMany("Present", "list")
     presents: Present[]
 }

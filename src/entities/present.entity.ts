@@ -21,6 +21,7 @@ export class Present {
     @Column()
     listId: number;
 
-    @ManyToOne(() => List, (list) => list.presents)
+    // write it with string to avoid circular dependencies
+    @ManyToOne("List", "presents")
     list: List
 }
