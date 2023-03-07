@@ -1,4 +1,5 @@
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
+import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from "typeorm";
+import {Present} from "./present.entity";
 
 @Entity()
 export class List {
@@ -7,4 +8,7 @@ export class List {
 
     @Column()
     name!: string;
+
+    @OneToMany(() => Present, (present) => present.list)
+    presents: Present[]
 }
