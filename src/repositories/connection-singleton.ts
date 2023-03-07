@@ -1,8 +1,6 @@
 import {Connection} from "typeorm/connection/Connection";
-import {createConnection, Repository} from "typeorm";
-import {Family} from "../entities/family.entity";
-import {Member} from "../entities/member.entity";
-import {Present} from "../entities/present.entity";
+import {createConnection} from "typeorm";
+import {getEntities} from "../entities";
 
 export const startConnection =  (async (): Promise<Connection> => {
     // Initialize a connection pool against the database.
@@ -14,7 +12,7 @@ export const startConnection =  (async (): Promise<Connection> => {
             username: "jpb_dev",
             password: "Pick",
             database: "family-present",
-            entities: [Family, Member, Present],
+            entities: getEntities(),
             synchronize: true,
         });
         return connection
